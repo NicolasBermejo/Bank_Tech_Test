@@ -4,7 +4,8 @@ class Account
 @account = {}
 
   def balance
-    "this is your balance"
+    p "this is your balance"
+    menu
   end
 
   def deposit
@@ -16,9 +17,8 @@ class Account
   def statement
   end
 
-  def menu
+  def main_menu
     puts """
-    Welcome!
     What would you like to do?
     To display your balance enter 1
     To deposit into your account enter 2
@@ -42,6 +42,5 @@ class Account
         exit
     end
   end
-
 
 end
