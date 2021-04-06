@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <img src="./Images/bank_vaults.jpeg" alt="vault" style="width:500px; height:250px"/>
+=======
+<img src="./Images/bank_vaults.jpeg" alt="vault" style="width:350px; height:150px;"/>
+>>>>>>> e5504216ec6a1fff47ba13a435c5fe9700a77503
 
 # Bank Tech Test
 
