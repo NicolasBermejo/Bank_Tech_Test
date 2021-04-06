@@ -1,4 +1,4 @@
-<img src="./Images/bank_vaults.jpeg" alt="vault" style="width:500px;"/>
+<img src="./Images/bank_vaults.jpeg" alt="vault" style="width:350px;"/>
 
 # Bank Tech Test
 
