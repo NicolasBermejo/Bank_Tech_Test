@@ -48,3 +48,27 @@ As a User
 So I can check the status of my Account
 I want to be able to print my balance/statement
 ```
+
+## How to Use
+
+* In order to use this, please clone this repo.
+* once you open it in you text editor, please run
+```
+~ bundle install
+```
+* Then you will need to open REPL by typing 'irb' in your terminal:
+```
+~ irb
+```
+* Once in irb you will need to require the necessary files:
+```
+> require './lib/Account.rb'
+```
+* Then you need to initialize the Account:
+```
+> account = Account.new
+```
+* Then type the following and follow the instruction on screen:
+```
+> account.menu
+```
