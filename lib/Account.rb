@@ -1,46 +1,25 @@
 class Account
-  attr_reader :account, :date, :credit, :deposit, :balance
+  attr_reader :account, :balance
 
-@account = {}
-
-  def balance
-    p "this is your balance"
-    menu
+  def initialize
+    @balance = 0
+    @account = []
   end
 
-  def deposit
+
+  def deposit(amount)
+    @balance += amount
+    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => 0, :deposit => amount, :balance => @balance}
   end
 
-  def withdrawal
+  def withdrawal(amount)
+    @balance -= amount
+    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => amount, :deposit => 0, :balance => @balance }
   end
 
   def statement
+    puts Hirb::Helpers::Table.render(@account, fields: [:date, :credit, :deposit, :balance])
   end
 
-  def main_menu
-    puts """
-    What would you like to do?
-    To display your balance enter 1
-    To deposit into your account enter 2
-    To withdraw from your account enter 3
-    to view your full statement enter 4
-    to leave enter 5
-    """
-
-    input = gets.chomp
-
-    case input
-      when "1"
-        balance
-      when "2"
-        deposit
-      when "3"
-        withdrawal
-      when "4"
-        statement
-      when "5"
-        exit
-    end
-  end
 
 end

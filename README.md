@@ -63,6 +63,7 @@ I want to be able to print my balance/statement
 * Once in irb you will need to require the necessary files:
 ```
 > require './lib/Account.rb'
+> require 'hirb'
 ```
 * Then you need to initialize the Account:
 ```
