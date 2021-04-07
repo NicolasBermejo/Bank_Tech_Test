@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'date.rb'
 # account class
 class Account
   attr_reader :account, :balance, :date
@@ -8,9 +7,6 @@ class Account
   def initialize
     @balance = 0
     @account = []
-  end
-
-  def date
     @date = Date.new.current_date
   end
 
