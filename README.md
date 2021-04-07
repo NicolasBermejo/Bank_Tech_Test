@@ -80,3 +80,8 @@ I want to be able to print my balance/statement
 > account.statement
        # this shows a full rundown of actions on the account.
 ```
+* In order to run the tests just enter either in the terminal:
+```
+~ rspec
+~ rubocop
+```
