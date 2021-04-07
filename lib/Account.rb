@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'date.rb'
 # account class
 class Account
   attr_reader :account, :balance, :date
@@ -10,7 +11,7 @@ class Account
   end
 
   def date
-    @date = Time.now.strftime('%d/%m/%Y')
+    @date = Date.new.current_date
   end
 
   def deposit(amount)

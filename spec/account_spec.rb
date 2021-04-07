@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require './lib/account.rb'
+require './lib/date.rb'
 require 'hirb'
 
 describe Account do
