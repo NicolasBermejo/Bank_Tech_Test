@@ -9,12 +9,16 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => 0, :deposit => amount, :balance => @balance}
+    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => nil, :deposit => amount, :balance => @balance}
   end
 
   def withdrawal(amount)
-    @balance -= amount
-    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => amount, :deposit => 0, :balance => @balance }
+    if amount > @balance
+      raise Exception.new "Not enough money on account"
+    else
+      @balance -= amount
+      @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => amount, :deposit => nil, :balance => @balance }
+    end
   end
 
   def statement
