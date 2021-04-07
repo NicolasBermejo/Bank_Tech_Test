@@ -1,0 +1,69 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/nico/Desktop/Makers/Projects/Bank_Tech_Test/spec/account_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          5,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/nico/Desktop/Makers/Projects/Bank_Tech_Test/lib/Account.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          4,
+          4,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1617801292
+  }
+}
