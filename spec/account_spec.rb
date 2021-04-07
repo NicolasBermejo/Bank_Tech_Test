@@ -27,7 +27,10 @@ describe Account do
   end
 
   it 'has the date of the transaction' do
+    allow(Time).to receive(:now)
+    allow(Time.now).to receive(:strftime).and_return(@time_now)
+    @time_now = Time.now.strftime('%d/%m/%Y')
     subject.deposit(500)
-    expect(subject.date).to eq('07/04/2021')
+    expect(subject.date).to eq(@time_now)
   end
 end
