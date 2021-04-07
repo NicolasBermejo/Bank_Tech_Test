@@ -12,7 +12,7 @@ class Account
     @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => nil, :deposit => amount, :balance => @balance}
   end
 
-  def withdrawal(amount)
+  def withdraw(amount)
     if amount > @balance
       raise Exception.new "Not enough money on account"
     else

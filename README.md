@@ -69,7 +69,14 @@ I want to be able to print my balance/statement
 ```
 > account = Account.new
 ```
-* Then type the following and follow the instruction on screen:
+* Then you have the below options to chose from:
 ```
-> account.menu
+> account.deposit(amount)
+       # this allows to deposit money
+> account.withdraw(amount)
+       # this allows to withdraw money
+> account.balance
+       # this allows to show the account balance
+> account.statement
+       # this shows a full rundown of actions on the account.
 ```

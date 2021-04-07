@@ -13,12 +13,12 @@ describe Account do
 
   it 'can withdraw money' do
     subject.deposit(500)
-    subject.withdrawal(50)
+    subject.withdraw(50)
     expect(subject.balance).to eq(450)
   end
 
   it 'cannot withdraw money if not enough on account' do
-    expect { subject.withdrawal(50) }.to raise_error("Not enough money on account")
+    expect { subject.withdraw(50) }.to raise_error("Not enough money on account")
   end
 
 
