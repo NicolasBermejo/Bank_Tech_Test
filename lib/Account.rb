@@ -2,19 +2,23 @@
 
 # account class
 class Account
-  attr_reader :account, :balance
+  attr_reader :account, :balance, :date
 
   def initialize
     @balance = 0
     @account = []
   end
 
+  def date
+    @date = Time.now.strftime('%d/%m/%Y')
+  end
+
   def deposit(amount)
     @balance += amount
     @account << {
-      date: Time.now.strftime('%d/%m/%Y'),
+      date: @date,
       credit: nil,
-      deposit: amount,
+      debit: amount,
       balance: @balance
     }
   end
@@ -24,9 +28,9 @@ class Account
 
     @balance -= amount
     @account << {
-      date: Time.now.strftime('%d/%m/%Y'),
+      date: @date,
       credit: amount,
-      deposit: nil,
+      debit: nil,
       balance: @balance
     }
   end
@@ -34,7 +38,7 @@ class Account
   def statement
     puts Hirb::Helpers::Table.render(
       @account,
-      fields: %i[date credit deposit balance]
+      fields: %i[date credit debit balance]
     )
   end
 end

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require './lib/account.rb'
+require 'hirb'
 
 describe Account do
   subject { Account.new }
@@ -23,5 +24,10 @@ describe Account do
     expect { subject.withdraw(50) }.to raise_error(
       'Not enough money on account'
     )
+  end
+
+  it 'has the date of the transaction' do
+    subject.deposit(500)
+    expect(subject.date).to eq('07/04/2021')
   end
 end
