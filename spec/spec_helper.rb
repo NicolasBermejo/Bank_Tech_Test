@@ -15,11 +15,13 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'simplecov'
 require 'simplecov-console'
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
-  SimpleCov::Formatter::Console,
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new(
+  [
+  SimpleCov::Formatter::Console
   # Want a nice code coverage website? Uncomment this next line!
   # SimpleCov::Formatter::HTMLFormatter
-])
+  ]
+)
 SimpleCov.start
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
@@ -54,7 +56,7 @@ RSpec.configure do |config|
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
-=begin
+# =begin
   # This allows you to limit a spec run to individual examples or groups
   # you care about by tagging them with `:focus` metadata. When nothing
   # is tagged with `:focus`, all examples get run. RSpec also provides

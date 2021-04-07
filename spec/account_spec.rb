@@ -1,7 +1,9 @@
-require './lib/Account.rb'
+# frozen_string_literal: true
+
+require './lib/account.rb'
 
 describe Account do
-  subject {Account.new}
+  subject { Account.new }
   it 'starts with an empty account' do
     expect(subject.balance).to eq(0)
   end
@@ -18,8 +20,8 @@ describe Account do
   end
 
   it 'cannot withdraw money if not enough on account' do
-    expect { subject.withdraw(50) }.to raise_error("Not enough money on account")
+    expect { subject.withdraw(50) }.to raise_error(
+      'Not enough money on account'
+    )
   end
-
-
 end

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# account class
 class Account
   attr_reader :account, :balance
 
@@ -6,24 +9,32 @@ class Account
     @account = []
   end
 
-
   def deposit(amount)
     @balance += amount
-    @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => nil, :deposit => amount, :balance => @balance}
+    @account << {
+      date: Time.now.strftime('%d/%m/%Y'),
+      credit: nil,
+      deposit: amount,
+      balance: @balance
+    }
   end
 
   def withdraw(amount)
-    if amount > @balance
-      raise Exception.new "Not enough money on account"
-    else
-      @balance -= amount
-      @account << {:date => Time.now.strftime("%d/%m/%Y"), :credit => amount, :deposit => nil, :balance => @balance }
-    end
+    raise Exception.new 'Not enough money on account' if amount > @balance
+
+    @balance -= amount
+    @account << {
+      date: Time.now.strftime('%d/%m/%Y'),
+      credit: amount,
+      deposit: nil,
+      balance: @balance
+    }
   end
 
   def statement
-    puts Hirb::Helpers::Table.render(@account, fields: [:date, :credit, :deposit, :balance])
+    puts Hirb::Helpers::Table.render(
+      @account,
+      fields: %i[date credit deposit balance]
+    )
   end
-
-
 end

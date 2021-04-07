@@ -30,15 +30,17 @@
           null
         ]
       },
-      "/Users/nico/Desktop/Makers/Projects/Bank_Tech_Test/lib/Account.rb": {
+      "/Users/nico/Desktop/Makers/Projects/Bank_Tech_Test/lib/account.rb": {
         "lines": [
+          null,
+          null,
+          null,
           1,
           1,
           null,
           1,
           4,
           4,
-          null,
           null,
           null,
           1,
@@ -59,11 +61,10 @@
           0,
           null,
           null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1617801292
+    "timestamp": 1617802068
   }
 }
